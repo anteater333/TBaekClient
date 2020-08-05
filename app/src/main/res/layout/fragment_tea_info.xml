@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:orientation="vertical">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:context=".ui.searchresult.TeaInfoFragment">
+        <ImageView
+                android:src="@drawable/teabackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/imageView" android:scaleType="centerCrop"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="#80000000">
+
+            <TextView
+                    android:text="tea_sum_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/tea_sum_category"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp" android:textSize="18sp"
+                    android:textStyle="bold" android:textColor="#FFEB3B"
+                    app:layout_constraintHorizontal_bias="0.0" android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"/>
+            <TextView
+                    android:text="tea_sum_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/tea_sum_name"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tea_sum_category"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                    android:textColor="#FFEB3B" android:textSize="36sp" android:textStyle="bold"
+                    android:layout_marginLeft="16dp" android:layout_marginStart="16dp"/>
+            <TextView
+                    android:text=" tea_sum_description - 홍차 잎에 어쩌구저쩌구이러쿵저러쿵 줄 바뀜 테스트 할 수 있을 정도로 긴 텍스트"
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content" android:id="@+id/tea_sum_description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@android:color/secondary_text_dark" android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tea_sum_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.0" app:layout_constraintHorizontal_bias="0.0"
+                    android:layout_marginLeft="16dp" android:layout_marginStart="16dp"/>
+            <Button
+                    android:layout_width="28dp"
+                    android:layout_height="28dp" android:id="@+id/tea_sum_bookmark"
+                    app:layout_constraintStart_toEndOf="@+id/tea_sum_category" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                    app:layout_constraintHorizontal_bias="0.938" android:textSize="8sp"
+                    android:background="@android:drawable/btn_star"
+                    android:textColor="#FFFFFF"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+    <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp" app:tabIndicatorColor="@android:color/white"
+            android:background="@android:color/black"
+            app:tabTextColor="@android:color/white"
+            android:id="@+id/tea_spec_tab_layout">
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/tea_spec_container"
+            android:background="@android:color/black"/>
+</LinearLayout>

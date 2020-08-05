@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tag_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_tag"
+    android:layout_marginRight="8dp"
+    android:backgroundTint="@android:color/darker_gray"
+    >
+    <TextView
+            android:id="@+id/tag_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textAppearance="?attr/textAppearanceListItem" android:text="좋은효능"
+            android:textColor="@android:color/white" android:textStyle="bold"
+    android:textSize="18dp"/>
+</FrameLayout>

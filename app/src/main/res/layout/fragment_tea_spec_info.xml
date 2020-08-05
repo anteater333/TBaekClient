@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        tools:context=".ui.searchresult.teaspecfragment.TeaSpecInfoFragment" android:padding="8dp">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:padding="4dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                    android:id="@+id/tableLayout" android:gravity="center|left">
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp" android:gravity="center|left">
+                    <TextView
+                            android:text="인기"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/tea_spec_info_popular_graph_label"
+                            android:layout_marginRight="8dp"
+                            android:textColor="@android:color/holo_red_dark" android:textSize="18sp"
+                            android:textStyle="bold"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="200dp"
+                            android:layout_height="14dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_graph_background"
+                            android:id="@+id/tea_spec_info_popular_graph_container">
+                        <View
+                                android:layout_width="50dp" android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                android:background="@drawable/rounded_graph_red"
+                                android:id="@+id/tea_spec_info_popular_graph_bar">
+                        </View>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:gravity="center|left">
+                    <TextView
+                            android:text="추천"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/tea_spec_info_recommend_graph_label"
+                            android:layout_marginRight="8dp"
+                            android:textColor="@android:color/holo_blue_dark" android:textSize="18sp"
+                            android:textStyle="bold"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="200dp"
+                            android:layout_height="14dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_graph_background"
+                            android:id="@+id/tea_spec_info_recommend_graph_container">
+                        <View
+                                android:layout_width="50dp" android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                android:background="@drawable/rounded_graph_blue"
+                                android:id="@+id/tea_spec_info_recommend_graph_bar">
+                        </View>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+            </TableLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0" android:layout_marginBottom="42dp"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                    app:layout_constraintVertical_bias="0.0" android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp">
+                <TextView
+                        android:text="카페인"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/tea_spec_info_caffeine_label"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/white" android:textStyle="bold"/>
+                <TextView
+                        android:text="200.0mg"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content" android:id="@+id/tea_spec_info_caffeine_value"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/tertiary_text_dark"
+                        android:gravity="center|right"/>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp" android:id="@+id/constraintLayout"
+                    app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                        android:text="우리는 법"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/tea_spec_info_infuse_step_label"
+                        android:textColor="@android:color/white"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"/>
+                <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:id="@+id/tea_spec_info_infuse_step_list"
+                        app:layout_constraintTop_toBottomOf="@+id/tea_spec_info_infuse_step_label"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginTop="8dp" android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp" android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        tools:listitem="@layout/item_infuse_step"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="vertical"
+                />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                    android:text="효능"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/tea_spec_info_effect_label"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                    android:textColor="@android:color/white" android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="24dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/tea_spec_info_tag_list"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_tag_big"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tea_spec_info_effect_label"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

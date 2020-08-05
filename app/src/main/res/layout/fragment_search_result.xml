@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.searchresult.SearchResultFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tea_info_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView" android:fillViewport="true">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" android:background="#00000000"
+                    android:id="@+id/search_result_empty_area">
+                <ImageView
+                        android:src="@android:drawable/arrow_down_float"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageView3"
+                        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" android:layout_marginBottom="4dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tea_search_card_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal|top"
+                    android:paddingLeft="12dp"
+                    tools:listitem="@layout/item_tea_card"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_upper"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tag_container"
+    android:layout_width="36dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_tag"
+    android:layout_marginRight="4dp"
+    android:backgroundTint="@android:color/darker_gray"
+    >
+    <TextView
+            android:id="@+id/tag_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_gravity="center"
+            android:textAppearance="?attr/textAppearanceListItem" android:text="DummyTag"
+            android:textColor="@android:color/white" android:textStyle="bold"
+            android:textSize="7dp"
+            android:maxLines="1"/>
+</FrameLayout>
